@@ -936,7 +936,7 @@ export default function DeckPage() {
   }, [currentSlide, isAutoPlay, slides.length]);
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight' && currentSlide < slides.length - 1) {
         setCurrentSlide(currentSlide + 1);
       } else if (e.key === 'ArrowLeft' && currentSlide > 0) {
